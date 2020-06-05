@@ -4,6 +4,9 @@ metadata:
   name: bigtable-autoscaler
   labels:
     app: bigtable-autoscaler
+    app.kubernetes.io/name: bigtable-autoscaler
+    app.kubernetes.io/part-of: recommendations
+    k8s.bluecore.com/team: datascience
 spec:
   type: NodePort
   ports:
@@ -17,6 +20,11 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: bigtable-autoscaler 
+  labels:
+    app: bigtable-autoscaler
+    app.kubernetes.io/name: bigtable-autoscaler
+    app.kubernetes.io/part-of: recommendations
+    k8s.bluecore.com/team: datascience
 spec:
   replicas: 1
   selector:
