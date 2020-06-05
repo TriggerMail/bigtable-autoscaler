@@ -34,6 +34,9 @@ spec:
     metadata:
       labels:
         app: bigtable-autoscaler 
+        app.kubernetes.io/name: bigtable-autoscaler
+        app.kubernetes.io/part-of: recommendations
+        k8s.bluecore.com/team: datascience
       annotations:
         cluster-autoscaler.kubernetes.io/safe-to-evict: 'true'
     spec:
